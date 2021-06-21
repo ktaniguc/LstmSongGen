@@ -172,7 +172,7 @@ def make_melody(length=200):
 
 if make_model:
   print_callbak = LambdaCallback(on_epoch_end=on_epoch_end, on_train_end=on_train_end)
-  model.fit(x, y, batch_size=128, epochs=2, callbacks=[print_callbak])
+  model.fit(x, y, batch_size=128, epochs=120, callbacks=[print_callbak])
 
 print('-------print score')
 melo_sentence = make_melody(700)
