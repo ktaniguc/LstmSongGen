@@ -115,7 +115,6 @@ def on_epoch_end(epoch, _):
 
       preds = model.predict(x_pred, verbose=0)[0]
       next_index = sample(preds, diversity)
-      print("next_index = ", next_index, "indices = ", indices_char[next_index])
       next_char = indices_char[next_index]
 
       generated += next_char+","
